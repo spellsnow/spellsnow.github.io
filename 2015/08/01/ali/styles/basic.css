@@ -1,0 +1,188 @@
+* { margin: 0; padding: 0;}
+body{ 
+	 font: 18px/1.5 "microsoft yahei","Arial Narrow", HELVETICA;
+	 color: #D8D8D8;
+	 background:#fff no-repeat top center;
+}
+/*页面头部*/
+header { width: 100%; height: 43px; position:fixed;background-color:rgba(255,255,255,0.2);box-shadow:0 0 4px rgba(0,0,0,0.3);z-index: 999;}
+header
+header nav { margin: 0 auto; width: 100%; text-align: center; }
+header nav ul li { line-height: 43px; display: block; }
+.left i{ color: #484848;float:left;margin-top: 5px;margin-left:3%;}
+.right i{float:right;margin:15px 25px;color:#242221;}
+.right i:hover{color:#fff;cursor: pointer;}
+header a i:hover{
+	color:#fff;
+}
+/*页面底部*/
+footer { background: #242221; width: 100%;height:100px;padding-top: 50px ;box-shadow:0 0 4px rgba(0,0,0,0.3);}
+.copyright{ 
+	text-align: center;
+	font:10px/20px  "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; 
+	color: #666;
+}
+.main{ width: 100%; overflow:hidden;height:1180px;z-index: 99;}
+/*轮播头图*/
+.main .wrap{
+height:600px;
+width:1349px;
+margin:-27px auto;
+overflow: hidden;
+position:relative;
+box-shadow:0 0 4px rgba(0,0,0,0.3);
+}
+
+.main .wrap ul li{height:600px;}
+.main .wrap ol{
+ position:absolute;
+ left:50%;
+ transform:translateX(-50%);
+ bottom:10px;
+ list-style: none;
+}
+.main .wrap ol li{
+height:20px; width: 20px;
+border-radius: 10px;
+background:rgba(255,255,255,0.3);
+margin-left:5px;
+float:left;
+line-height:center;
+text-align:center;
+cursor:pointer;
+}
+.main .wrap ol .on{
+background:rgba(226,4,1,0.7);
+color:#fff;
+}
+
+#container{
+	height:500px;
+	margin:30px auto;
+	margin-left: 35px;
+	top: 15px;
+	position:relative;
+	
+}
+
+#container .card{
+	width: 270px;
+	height:470px;
+	border-radius: 15px;
+	position:absolute;
+	display: block;
+	border: 2px solid #fff;
+	box-shadow:1px 2px 4px rgba(0,0,0,0.2);
+	color:#fff;
+	/*font:20px/2 "microsoft yahei" sans-serif;*/
+	font:0px/2 'Helvetica Neue',Arial,'Hiragino Sans GB',STHeiti,'STHeiti Light [STXihei]','Microsoft Yahei',sans-serif;;
+	padding:50px 35px;
+}
+.c1{
+	z-index: 9;
+	margin-left: 0px;
+	background:rgb(253,93,88);
+}
+.c2{
+	z-index: 19;
+	background:rgb(243,177,104);
+}
+.c3{
+	z-index: 29;
+	background:rgb(244,208,109);
+}
+.c4{
+	z-index: 39;
+	background:rgb(212,230,113);
+}
+.c5{
+	z-index: 49;
+	background:rgb(123,218,217);
+}
+.c6{
+	z-index: 59;
+	background:rgb(154,174,239);
+}
+.c7{
+	z-index: 69;
+	background:rgb(182,144,213);
+}
+.c8{
+	z-index: 79;
+	background:rgb(140,116,100);
+}
+
+/*sidenav*/
+#sidenav{
+	overflow: hidden;
+	background-color: #242221;
+	display:none;
+	width:300px;
+	height:100%;	
+	margin:0;
+	padding-top:43px;
+
+	z-index: 999;
+	position:fixed;
+	overflow: hidden;
+	top: 0;
+	right:0;
+}
+#sidenav li{
+	height:60px;
+	line-height: 60px;
+	font-size: 15px;
+	text-align: left;
+	padding-left: 20px;
+	list-style: none;
+
+}
+#sidenav li a{
+	text-decoration: none;
+	color:#666;
+	box-shadow:1px 1px 4px rgba(0,0,0,0.3);
+}
+#sidenav li:hover{
+	background-color: #fff;
+}
+
+/* Close Button */
+.close-button{
+	width: 16px;
+	height: 16px;
+	position: absolute;
+	right: 1em;
+	top: 1em;
+	overflow: hidden;
+	text-indent: 16px;
+	border: none;
+	z-index: 1001;
+	background: transparent;
+	color: transparent;
+}
+.close-button::before,
+.close-button::after {
+	content: '';
+	position: absolute;
+	width: 2px;
+	height: 100%;
+	top: 0;
+	left: 50%;
+	background: #888;
+}
+
+.close-button::before {
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.close-button::after {
+	-webkit-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+}
+
+
+
+
+
+

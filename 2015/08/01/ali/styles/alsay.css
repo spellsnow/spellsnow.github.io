@@ -1,0 +1,90 @@
+body{
+	background-color: rgb(150,206,180);
+	color: #666;
+}
+header{
+	background:rgba(255,255,255,0);
+}
+#content{
+	width:1000px;
+	background-color:rgba(255,255,255,0.3);
+	margin:0 auto;
+	overflow: hidden;
+	margin-bottom: 15px;
+}
+
+.artic{
+	width:700px;
+	margin:48px auto 20px;
+	/*margin-top:48px;
+	margin-bottom:20px;*/
+	/*float:right;*/
+	background-color: rgba(255,255,255,0.7);
+	overflow: hidden;
+	/*box-shadow: 0 3px 4px rgba(0,0,0,0.3);*/
+}
+.artic article{
+	border-bottom: #c0e3cf 40px solid;
+}
+.title{
+	font-size: 20px;
+    line-height: 28px;
+    display: inline-block;
+    padding: 38px 60px 8px 80px;
+    border-bottom: 1px solid #e2e2e2; 
+    width: 100%;  
+}
+.title a{color:#454545; text-decoration: none;}
+.text{font-size: 14px;padding:20px 40px;}
+.text p{line-height: 24px;margin-bottom:10px; }
+.textfoot { 
+	padding: 20px 60px; 
+	border-top: 1px solid #dddcdb; 
+	text-align: right; 
+	box-shadow: #999 0px 2px 3px;
+	font-size: 15px;
+}
+.textfoot a { margin-left: 10px; text-decoration: none;}
+.textfoot a:hover{text-decoration: underline;}
+.pages{
+	padding:0 60px 25px;
+	background: #C0E3CF;
+	font-size: 10px;
+	text-align: right;
+}
+.pages span{
+	padding:5px 8px;
+	border:none;
+	margin:0 0 0 5px;
+}
+.pages a{
+	background: #fff;
+	color:#454545;
+	padding:5px 8px;
+	border: none; 
+	margin: 0 0 0 5px;
+	text-decoration: none; 
+}
+footer{
+	position:absolute;
+	margin-bottom:0;
+	width:100%;
+	z-index: 999;
+}
+
+
+/*更改文字鼠标选中颜色*/
+::selection {
+    background:rgb(150,206,180); 
+    color:#fff;
+}
+
+::-moz-selection {
+    background:rgb(150,206,180); 
+    color:#fff;
+}
+
+::-webkit-selection {
+    background:rgb(150,206,180); 
+    color:#fff;
+}

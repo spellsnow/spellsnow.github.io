@@ -1,0 +1,46 @@
+header {background: rgba(226,227,221,0.4);}
+.content{
+	width:913px;
+	margin:0 auto;
+	height:100%;
+	border:1px dashed rgb(226,227,221);
+}
+.content .img1{
+	border-bottom: 1px dashed rgb(226,227,221);
+}
+.img1 img{
+	margin:50px 0 0;
+}
+.img1 p{
+	font-size: 14px;
+	color:#000;
+	line-height: 24px;
+	margin-bottom:10px;
+}
+.img2 img{
+	margin:20px 0 0;
+}
+
+
+footer { background: rgb(226,227,221); width: 100%;height:100px;padding-top: 50px ;box-shadow:0 0 4px rgba(0,0,0,0.3);}
+.copyright{ 
+	text-align: center;
+	font:10px/20px  "Open Sans", "Helvetica Neue", "Helvetica", "Hiragino Sans GB", "Microsoft YaHei", Arial, sans-serif; 
+	color: #000;
+}
+
+/*更改文字鼠标选中颜色*/
+::selection {
+    background:rgb(0,0,0); 
+    color:#fff;
+}
+
+::-moz-selection {
+    background:rgb(0,0,0); 
+    color:#fff;
+}
+
+::-webkit-selection {
+    background:rgb(0,0,0); 
+    color:#fff;
+}
