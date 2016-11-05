@@ -6,7 +6,7 @@ header{
 	background:rgba(255,255,255,0);
 }
 #content{
-	width:1000px;
+	width:100%;
 	background-color:rgba(255,255,255,0.3);
 	margin:0 auto;
 	overflow: hidden;
@@ -14,7 +14,7 @@ header{
 }
 
 .artic{
-	width:700px;
+	width:100%;
 	margin:48px auto 20px;
 	/*margin-top:48px;
 	margin-bottom:20px;*/
@@ -22,6 +22,16 @@ header{
 	background-color: rgba(255,255,255,0.7);
 	overflow: hidden;
 	/*box-shadow: 0 3px 4px rgba(0,0,0,0.3);*/
+}
+@media screen and (min-width: 500px){
+	.artic{
+		width:80%;
+	}
+}
+@media screen and (min-width: 800px){
+	.artic{
+		width:60%;
+	}
 }
 .artic article{
 	border-bottom: #c0e3cf 40px solid;

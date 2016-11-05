@@ -1,24 +1,33 @@
 header {background: rgba(226,227,221,0.4);}
 .content{
-	width:913px;
+	width:100%;
 	margin:0 auto;
 	height:100%;
-	border:1px dashed rgb(226,227,221);
 }
 .content .img1{
+	text-align: center;
 	border-bottom: 1px dashed rgb(226,227,221);
 }
 .img1 img{
 	margin:50px 0 0;
+	max-width: 100%;
 }
 .img1 p{
+	max-width:913px;
+	margin:0 auto;
 	font-size: 14px;
 	color:#000;
 	line-height: 24px;
-	margin-bottom:10px;
+}
+@media screen and (max-width: 400px){
+	.img1 p{
+		font-size: 10px;
+		line-height: 17px;
+	}
 }
 .img2 img{
 	margin:20px 0 0;
+	max-width: 100%;
 }
 
 

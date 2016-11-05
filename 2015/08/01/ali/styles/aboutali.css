@@ -1,14 +1,23 @@
 header {background-color:rgba(231,46,52,0.8);}
 .content{
-	width:700px;
-	margin: 0 auto;
+	width:100%;
 	height:100%;
+	text-align: center;
 }
 .content img{
-	margin:50px 200px 10px;
+	max-width: 100%;
+	margin:50px auto 20px;
 }
 .content p{
 	color:rgb(231,46,52);
+	text-align: left;
+	margin:0 10px;
+}
+@media screen and (min-width: 500px){
+	.content p{
+		width:65%;
+		margin:0 auto;
+	}
 }
 hr{border:1px dashed rgb(231,46,52);}
 footer { background: rgb(231,46,52); width: 100%;height:100px;padding-top: 50px ;box-shadow:0 0 4px rgba(0,0,0,0.3);}
