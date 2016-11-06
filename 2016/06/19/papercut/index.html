@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw a annulus</title>
+</head>
+<body>
+	<canvas id="canvas" style="/*border:1px solid #aaa;*/display:block;margin:20px auto;box-shadow:0px 0px 4px 0px rgba(0,0,0,0.4);">
+		当前浏览器不支持Canvas，请更换浏览器后再试！
+	</canvas>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			canvas.width=600;
+			canvas.height=600;
+			if(canvas.getContext){
+				var context=canvas.getContext("2d");
+				context.beginPath();
+				context.rect(100,100,400,400);
+				pathRect(context,200,200,100,100);
+				pathTriangle(context,310,310,150,450,350,450);
+				context.arc(450,400,100,0,Math.PI*2,true);
+				context.closePath();
+
+				context.fillStyle="#058";
+				context.shadowColor="grey";
+				context.shadowOffsetX=10;
+				context.shadowOffsetY=10;
+				context.shadowBlur=5;
+				context.fill();
+			}
+		}
+		function pathRect(cxt,x,y,width,height){
+			cxt.moveTo(x,y);
+			cxt.lineTo(x,y+height);
+			cxt.lineTo(x+width,y+height);
+			cxt.lineTo(x+width,y);
+			cxt.lineTo(x,y);
+		}
+
+		function pathTriangle(cxt,x1,y1,x2,y2,x3,y3){
+			cxt.moveTo(x1,y1);
+			cxt.lineTo(x2,y2);
+			cxt.lineTo(x3,y3);
+			cxt.lineTo(x1,y1);
+		}
+	</script>
+</body>
+</html>

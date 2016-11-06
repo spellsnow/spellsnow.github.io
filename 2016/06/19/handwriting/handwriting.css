@@ -1,0 +1,72 @@
+#canvas{
+ /* canvas跟其他标签一样，也可以通过css来定义样式。
+	但这里需要注意的是：canvas的默认宽高为300px * 150px,在css中为canvas定义宽高，
+	实际上把宽高为300px * 150px的画布进行了拉伸，如果在这样的情况下进行canvas绘图，
+	你得到的图形可能就是变形的效果。所以，在canvas绘图时，应该在canvas标签里直接定义宽高。 */
+/* 	width:800px;
+height:800px; */
+	display:block;
+	margin:0 auto;
+	/*border:1px solid #aaa;*/
+}
+
+#controller{
+	/*width:800px;*/
+	margin:0 auto;
+}
+.op_btn{
+	float:right;
+	margin:10px 0 0 10px;
+	border:2px solid #aaa;
+	width:80px;
+	height:40px;
+	line-height: 40px;
+	font-size: 20px;
+	text-align: center;
+	border-radius: 5px 5px;
+	cursor:pointer;
+	background-color:white;
+	font-weight:bold;
+	font-family:Microsoft Yahei,Arial;
+}
+
+.op_btn:hover{
+	background-color: #def;
+}
+.clearfix{
+	clear:both;
+}
+.color_btn{
+	float: left;
+	margin:10px 10px 0 0;
+	border:5px solid white;
+	width:40px;
+	height:40px;
+	border-radius:5px 5px;
+	cursor: pointer;
+}
+.color_btn:hover{
+	border:5px solid blueviolet;
+}
+
+.color_btn_selected{
+	border:5px solid blueviolet;
+}
+#black_btn{
+	background-color:black;
+}
+#blue_btn{
+	background-color:blue;
+}
+#green_btn{
+	background-color:green;
+}
+#yellow_btn{
+	background-color:yellow;
+}
+#orange_btn{
+	background-color:orange;
+}
+#red_btn{
+	background-color:red;
+}

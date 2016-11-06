@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>聚美优品</title>
+	<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		body{
+			font: 12px/1.7 microsoft yahei;
+		}
+		li{
+			list-style: none;
+		}
+		#content{
+			width:800px;
+			margin:0 auto;
+			padding:20px;
+		}
+		#content h1{
+			color:rgb(182,29,29);
+		}
+		#content .item{
+			padding:20px;
+			margin-bottom: 20px;
+			border:1px dashed rgb(182,29,29);
+		}
+		#content .item h2{
+			font-size: 16px;
+			font-weight: bolder;
+			border-bottom:2px solid rgb(182,29,29);
+			margin-bottom: 10px;
+		}
+		#content .item li{
+			display:inline-block;
+			margin:10px;
+		}
+		#content .item li a img{
+			width:230px;
+			height: 230px;
+			border: none;
+		}
+		#content .item li img:hover{
+			box-shadow:0 0 8px rgba(0,0,0,0.4);
+		}
+
+		#menu{
+			position:fixed;
+			top:100px;
+			left:50%;
+			margin-left: 400px;
+		}
+		#menu ul li a{
+		    display: block;
+            width: 80px;
+            height: 50px;
+            line-height: 50px;
+            text-decoration: none;
+            text-align: center;
+			font-size: 14px;
+			color:rgb(182,29,29);
+		}
+		
+	    #menu ul li a:hover,
+        #menu ul li a.current {
+            color: #fff;
+            background: rgb(182,29,29);
+        }
+
+	</style>
+	 <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
+	<script>
+	// jquery实现方法
+	/*	$(document).ready(function(){
+			// 监听scroll滚动条
+			$(window).scroll(function(){
+				var items=$("#content").find(".item");
+				var menu=$("#menu");
+				var top=$(document).scrollTop();
+				var currentId="";
+
+				items.each(function(){
+					var m=$(this);
+					if(top>m.offset().top-200){
+						currentId="#"+m.attr("id");
+					}else{
+						return false;
+					}
+				});
+				var currentLink=menu.find(".current");
+				if(currentId && currentLink.attr("href")!= currentId){
+					currentLink.removeClass("current");
+					menu.find("[href=" + currentId + "]").addClass("current");
+				}
+			});
+		})*/
+
+// JavaScript实现方法
+		function getElementsByClassName(node,classname){
+			if(node.getElementsByClassName){
+				return node.getElementsByClassName(classname);
+			}else{
+				var results=new Array();
+				var elems=node.getElementsByTagName("*");
+				for(var i=0;i<elems.length;i++){
+					if(elems[i].className.indexOf(classname) != -1){
+						results[results.length]=elems[i];
+					}
+				}
+				return results;
+			}
+		}
+
+		function hasClass(obj,cls){
+			return obj.className.match(new RegExp("(\\s|^)"+ cls +"(\\s|$)"));
+		}
+
+		function removeClass(obj ,cls){
+			if(hasClass(obj,cls)){
+				var reg = new RegExp("(\\s|^)"+ cls +"(\\s|$)");
+				obj.className=obj.className.replace(reg,"");
+			}
+		}
+
+		function addClass(obj,cls){
+			if(!hasClass(obj,cls)){
+				obj.className += " "+ cls;
+			}
+		}
+
+		window.onload=function(){
+			window.onscroll=function(){
+				var top=document.documentElement.scrollTop || document.body.scrollTop;
+				var menus=document.getElementById("menu").getElementsByTagName("a");
+				var items=getElementsByClassName(document.getElementById("content"),"item");
+
+				for(var i=0;i<items.length;i++){
+					var _item=items[i];
+					var _itemTop = _item.offsetTop;
+					if(top > _itemTop - 200){
+						currentId=_item.id;
+					}else{
+						break;
+					}
+				}
+
+				if(currentId){
+					for (var j = 0; j < menus.length; j++) {
+						var _menu=menus[j];
+						var _href=_menu.href.split("#");
+						if(_href[_href.length - 1] != currentId){
+							removeClass(_menu,"current");
+						}else{
+							addClass(_menu,"current");
+						}
+					};
+				}
+
+			}
+		}
+	</script> 
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li><a href="#item1" class="current">1F 男装</a></li>
+			<li><a href="#item2">2F 女装</a></li>
+			<li><a href="#item3">3F 美妆</a></li>
+			<li><a href="#item4">4F 数码</a></li>
+			<li><a href="#item5">5F 母婴</a></li>
+			<li><a href="#content">TOP</a></li>
+		</ul>
+	</div>
+	<div id="content">
+		<h1>聚美特惠</h1>
+		<div id="item1" class="item">
+			<h2>1F 男装</h2>
+			<ul>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="1F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div id="item2" class="item">
+			<h2>2F 女装</h2>
+			<ul>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="2F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div id="item3" class="item">
+			<h2>3F 美妆</h2>
+			<ul>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="3F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div id="item4" class="item">
+			<h2>4F 数码</h2>
+			<ul>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+				<li><a href="#"><img src="4F.png" alt=""></a></li>
+			</ul>
+		</div>
+
+		<div id="item5" class="item">
+			<h2>5F 母婴</h2>
+			<ul>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+				<li><a href="#"><img src="5F.jpg" alt=""></a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>

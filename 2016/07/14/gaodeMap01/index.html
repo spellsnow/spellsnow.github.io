@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%">
+<head>
+	<meta charset="UTF-8">
+	<title>地图组件</title>
+	<style>
+		body{width:100%;height:100%;margin:0;font-size:20px;font-family:arial;}
+		#map{width:100%;height:100%;}
+		.zoom{position:absolute;left:20px;width:40px;height:40px;line-height:40px;background-color:rgba(0,147,253,0.5);border-radius: 50%;text-align: center;color:#fff;cursor:pointer;font-weight:900;}
+		#zoomin{bottom:90px;}
+		#zoomout{bottom:30px;}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="zoomin" class="zoom" onselectstart="return false">+</div>
+	<div id="zoomout" class="zoom" onselectstart="return false">-</div>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=18918f6f3ebeba5c3c29e2c144224311"></script>
+	<script type="text/javascript">
+		(function(){
+			var map =new AMap.Map('map');
+			map.setCity('杭州市');
+			map.setZoom(10);
+			document.getElementById('zoomin').onclick=function(){
+				map.zoomIn();
+			}
+			document.getElementById('zoomout').onclick=function(){
+				map.zoomOut();
+			}
+			// 地图插件
+			// 比例尺插件
+			map.plugin(['AMap.Scale'],function(){
+				var scale = new AMap.Scale();
+				map.addControl(scale);
+			});
+			// 鹰眼插件
+			map.plugin(["AMap.OverView"],function(){
+			    view = new AMap.OverView();
+			    view.open();
+			    map.addControl(view);
+			});
+			// 地图类型切换
+			map.plugin(['AMap.MapType'],function(){
+				var type=new AMap.MapType();
+				map.addControl(type);
+			});
+			// 鱼骨工具条
+			map.plugin(['AMap.ToolBar'],function(){
+				var tool=new AMap.ToolBar();
+				map.addControl(tool);
+			});
+			// map.plugin(['AMap.MouseTool'],function(){
+			// 	var mousetool=new AMap.MouseTool(map);
+			// 	mousetool.measure();
+			// });
+			
+			// 测距
+			map.plugin(['AMap.RangingTool'],function(){
+				var ruler=new AMap.RangingTool(map);
+				ruler.turnOn();
+			});
+		})();
+	</script>
+</body>
+</html>

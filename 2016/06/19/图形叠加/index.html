@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw a line</title>
+	<style>
+		#buttons{width:1200px;margin:10px auto;clear:both;font-family: "Microsoft Yahei"}
+		#buttons a{font-size:17px; display:block;float:left;margin-right:14px;}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" style=" display:block;margin:20px auto;box-shadow:0px 0px 4px 0px rgba(0,0,0,0.4);">
+		当前浏览器不支持Canvas，请更换浏览器后再试！
+	</canvas>
+	<div id="buttons">
+		<a href="#">source-over</a>
+		<a href="#">source-atop</a>
+		<a href="#">source-in</a>
+		<a href="#">source-out</a>
+		<a href="#">destination-over</a>
+		<a href="#">destination-atop</a>
+		<a href="#">destination-in</a>
+		<a href="#">destination-out</a>
+		<a href="#">lighter</a>
+		<a href="#">copy</a>
+		<a href="#">xor</a>
+	</div>
+	<script>
+		window.onload=function(){
+			draw("source-over");
+
+			var buttons=document.getElementById("buttons").getElementsByTagName("a");
+
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].onclick=function(){
+					draw(this.text);
+					return false;
+				}
+			}
+		}
+
+		function draw(compositeStyle){
+			var canvas=document.getElementById("canvas");
+			canvas.width=600;
+			canvas.height=600;
+			if(canvas.getContext){
+				var context=canvas.getContext("2d");
+				context.clearRect(0,0,canvas.width,canvas.height);
+				// write title
+				context.font="lighter 20px Microsoft Yahei";
+				context.textAlign="center";
+				context.textBaseline="middle";
+				context.fillStyle="grey";
+				context.fillText("globalCompositeOperation="+compositeStyle,canvas.width/2,60);
+
+				// draw a arc
+				context.fillStyle="lightgreen";
+				context.arc(300,300,150,0,2*Math.PI);
+				context.fill();
+				// draw a triangle
+				context.globalCompositeOperation=compositeStyle;
+				context.fillStyle="brown";
+				context.beginPath();
+				context.moveTo(300,300);
+				context.lineTo(200,500);
+				context.lineTo(400,500);
+				context.closePath();
+				context.fill();
+			}
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html style="width:100%;height:100%">
+<head>
+	<meta charset="UTF-8">
+	<title>高德地图出行示意图</title>
+	<style>
+		body{width:100%;height:100%;margin:0;font-size:20px;font-family:arial;}
+		#map{width:100%;height:100%;}
+	    #panel {
+	        position: absolute;
+	        background-color: white;
+	        max-height: 100%;
+	        overflow-y: auto;
+	        top: 10px;
+	        right: 10px;
+	        width: 250px;
+	        border: solid 1px silver;
+    	}
+	</style>
+</head>
+<body>
+	<div id="map"></div>
+	<div id="panel"></div>
+	<script type="text/javascript" src="http://webapi.amap.com/maps?v=1.3&key=18918f6f3ebeba5c3c29e2c144224311"></script>
+	<script type="text/javascript">
+		(function(){
+			var map =new AMap.Map('map');
+			//公共交通
+			AMap.service(['AMap.Transfer'],function(){
+				var transOptions={
+					map:map,
+					city:'济南市',
+					panel:'panel',
+					policy:AMap.TransferPolicy.LEAST_TIME
+					};
+					var trans=new AMap.Transfer(transOptions);
+				trans.search([{keyword:'山东建筑大学（公交站）'},{keyword:'山东省博物馆'}],function(status,result){
+
+				});
+			});
+			//驾车
+			// AMap.service(['AMap.Driving'],function(){
+			// 	var transOptions={
+			// 		map:map,
+			// 		city:'济南市',
+			// 		panel:'panel',
+			// 		policy:AMap.DrivingPolicy.REAL_TRAFFIC
+			// 		};
+			// 		var trans=new AMap.Driving(transOptions);
+			// 	trans.search([{keyword:'山东建筑大学（公交站）'},{keyword:'山东省博物馆'}],function(status,result){
+
+			// 	});
+			// });
+			AMap.service(['AMap.Driving'],function(){
+				var transOptions={
+					map:map,
+					city:'济南市',
+					panel:'panel',
+					policy:AMap.DrivingPolicy.REAL_TRAFFIC
+					};
+					var trans=new AMap.Driving(transOptions);
+				trans.search([{keyword:'山东建筑大学（公交站）'},{keyword:'山东省博物馆'}],function(status,result){
+
+				});
+			});
+		})();
+	</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Draw a starSky</title>
+</head>
+<body>
+	<canvas id="canvas" style="/*border:1px solid #aaa;*/display:block;margin:50px auto;box-shadow:0px 0px 4px 0px rgba(0,0,0,0.4);">
+		当前浏览器不支持Canvas，请更换浏览器后再试！
+	</canvas>
+	<script>
+		window.onload=function(){
+			var canvas=document.getElementById("canvas");
+			canvas.width=800;
+			canvas.height=800;
+			if(canvas.getContext){
+				var context=canvas.getContext("2d");
+				// context.lineWidth=10;
+
+				context.fillStyle="rgba(0,0,0,0.8)";
+				context.fillRect(0,0,canvas.width,canvas.height);
+				context.lineJoin="round";
+				var num=100;
+				for (var i = 0; i < num; i++) {
+					var x=Math.random()*canvas.width,
+						y=Math.random()*canvas.height,
+						r=Math.random()*10+15,
+						a=Math.random()*360;
+					var dis=Math.min(x,canvas.width-x,y,canvas.height-y);
+					if(dis>=r){
+						drawStar(context,r/2.0,r,x,y,a);	
+					}					
+					
+				}
+
+			}
+			
+
+			// 定义画星星的函数，并且可以偏移和旋转（+顺时针）
+			function drawStar(cxt,r,R,x,y,rot){
+				cxt.beginPath();
+				for (var i = 0; i < 5; i++) {
+					cxt.lineTo(Math.cos((18+i*72-rot)/180*Math.PI)*R+x,-Math.sin((18+i*72-rot)/180*Math.PI)*R+y);
+					cxt.lineTo(Math.cos((54+i*72-rot)/180*Math.PI)*r+x,-Math.sin((54+i*72-rot)/180*Math.PI)*r+y);
+				}
+				cxt.closePath();
+				cxt.lineWidth=3;
+				cxt.strokeStyle="#fb5";
+				cxt.fillStyle="#fb3";
+				cxt.fill();
+				cxt.stroke();
+
+			}
+		}
+	</script>
+</body>
+</html>

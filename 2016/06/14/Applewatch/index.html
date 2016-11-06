@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>AppleWatch</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="fullPage">
+	<div class="section section1">
+		<h1>它，终于来了。</h1>
+		<p>
+			为了充分发挥体积小巧以及佩戴于手腕的优势，Apple Watch带来了全新的科技和互动方式。它可以帮助你更快捷地完成一些早已习惯的事，也可以实现过去根本无法企及的新功能。因此，这将是焕然一新的使用体验，也将实现与你前所未有的贴近。
+		</p>
+		<a href="#">进一步了解</a>
+	</div>
+
+	<div class="section section2">
+		<h1>真正贴心的个人设备</h1>
+		<a href="#">进一步了解</a>
+	</div>
+
+	<div class="section section3">
+		<h1>非同一般的进准计时</h1>
+		<p>高级手表向来以精准即时为本，Apple Watch更是如此。它与你的iPhone配合使用，同全球标准时间的误差不超过0.05秒。而且，你可以对表盘进行个性化设定，以更具个性和意义的方式显示时间，使其更贴合你的生活和日程需要。</p>
+		<a href="#">进一步了解</a>
+	</div>
+	<div class="section section4">
+		<h1>在三个特色鲜明的系列中找到你的风格</h1>
+		<div class="row">
+			<div class="column">
+			<img src="img/primary_large_2x.jpg" alt="" class="primary">
+			<h4 class="primary"></h4>
+			<div class="intro">
+				<p>不锈钢或深空黑色不锈钢表壳，蓝宝石水晶镜面，搭配多款时尚表带。</p>
+				<a href="#" class="more">了解更多</a>
+			</div>
+		</div>
+
+		<div class="column">
+			<img src="img/sport_large_2x.jpg" alt="" class="sport">
+			<h4 class="sport"></h4>
+			<div class="intro">
+				<p>银色或深空灰色的阳极氧化铝金属表壳，强化ION-X玻璃，美丽柔韧的表带。</p>
+				<a href="#" class="more">了解更多</a>
+			</div>
+		</div>
+
+		<div class="column">
+			<img src="img/edition_large_2x.jpg" alt="" class="edition">
+			<h4 class="edition"></h4>
+			<div class="intro">
+				<p>18K黄金或玫瑰金表壳，蓝宝石水晶镜面，搭配精雕细琢的表扣。</p>
+				<a href="#" class="more">了解更多</a>
+			</div>
+		</div>
+		</div>
+		
+	</div>
+</div>
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.6/jquery.fullPage.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/move.js/0.5.0/move.min.js"></script>
+	<script>
+	$(function(){
+		$('#fullPage').fullpage({
+			verticalCentered:false,
+			anchors:['page1','page2','page3','page4'],
+			navigation:true,
+			navigationTooltips:['它，终于来了。','真正贴心的个人设备','非同一般的进准计时','特色鲜明的不同风格'],
+			afterLoad:function(link,index){
+				switch(index){
+					case 1:
+						move('.section1 h1').scale(1.2).end();
+						move('.section1 p').set('margin-top','5%').end();
+						break;
+					case 2:
+						move('.section2 h1').scale(0.7).end();
+						break;
+					case 3:
+						move('.section3 h1').set('margin-left','20px').end();
+						move('.section3 p').set('margin-left','20%').end();
+						break;
+					case 4:
+						move('.section4 img.primary').rotate(360).end(function(){
+							move('.section4 img.sport').rotate(360).end(function(){
+								move('.section4 img.edition').rotate(360).end(function(){
+									move('.section4 h4.primary').scale(1.2).end(function(){
+										move('.section4 h4.sport').scale(1.2).end(function(){
+											move('.section4 h4.edition').scale(1.2).end();
+									    })
+									})
+								})
+							})
+						})
+						break;
+					default:
+						break;
+
+				}
+				
+			},
+			onLeave:function(link,index){
+				switch(index){
+					case 1:
+						move('.section1 h1').scale(1).end();
+						move('.section1 p').set('margin-top','800px').end();
+						break;
+					case 2:
+						move('.section2 h1').scale(1).end();
+						break;
+					case 3:
+						move('.section3 h1').set('margin-left','-2500px').end();
+						move('.section3 p').set('margin-left','1500px').end();
+						break;
+					case 4:
+						move('.section4 img.primary').rotate(-360).end();
+						move('.section4 img.sport').rotate(-360).end();
+						move('.section4 img.edition').rotate(-360).end();
+						move('.section4 h4.primary').scale(1).end();
+						move('.section4 h4.sport').scale(1).end();
+						move('.section4 h4.edition').scale(1).end();
+			
+						break;
+					default:
+						break;
+
+				}
+				
+			},
+			afterRener:function(){
+				switch(index){
+					case 1:
+						break;
+					case 2:
+						break;
+					case 3:
+						break;
+					default:
+						break;
+
+				}
+				
+			}
+		});
+	});
+	</script>
+</body>
+</html>

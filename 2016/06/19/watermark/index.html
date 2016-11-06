@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>WaterMark</title>
+</head>
+<body style="background-color: rgb(34,34,34);">
+	<canvas id="canvas" style="display:block;margin:0 auto;border:1px solid rgba(24,24,24,0.7);">
+		Your brower is not apply for Canvas!
+	</canvas>
+	<input type="range" id="scale-range" min="0.5" max="3.0" value="1.0" step="0.01" style="display:block;margin:20px auto;width:800px;">
+
+	<canvas id="watermark-canvas" style="display:none;margin:0 auto;border:1px solid #aaa;"></canvas>
+	<script>
+		var canvas=document.getElementById("canvas");
+		var context=canvas.getContext("2d");
+		var image=new Image();
+		var slider=document.getElementById("scale-range");
+
+		// 获取水印canvas
+		var watermarkCanvas=document.getElementById("watermark-canvas");
+		var watermarkContext=watermarkCanvas.getContext("2d");
+
+		window.onload=function(){
+			canvas.width=1920;
+			canvas.height=1080;
+
+			var scale=slider.value;
+			image.src="cute.png";
+			image.onload=function(){
+				drawImageByScale(scale);
+				slider.onmousemove=function(){
+					scale=slider.value;
+					drawImageByScale(scale);
+				}
+			}
+
+			// setup WaterMark canvas
+			watermarkCanvas.width=320;
+			watermarkCanvas.height=100;
+			watermarkContext.font="bold 50px Arial";
+			watermarkContext.lineWidth="1";
+			watermarkContext.fillStyle="rgba(255,255,255,0.5)";
+			watermarkContext.textBaseline="middle";
+			watermarkContext.fillText("<lidashuai>",20,50);
+			
+		}
+
+
+		function drawImageByScale(scale){
+			var imageWidth=1920*scale;
+			var imageHeight=1080*scale;
+
+			var dx=(canvas.width-imageWidth)/2;
+			var dy=(canvas.height-imageHeight)/2;
+			context.clearRect(0,0,canvas.width,canvas.height);
+			context.drawImage(image,dx,dy,imageWidth,imageHeight);
+			context.drawImage(watermarkCanvas,canvas.width-watermarkCanvas.width,canvas.height-watermarkCanvas.height);
+		}
+	</script>
+</body>
+</html>

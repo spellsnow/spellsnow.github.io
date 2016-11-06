@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+	<title>图片轮播图</title>
+	<style>
+		*{margin:0;padding:0;text-decoration: none;}
+		body{padding:20px;}
+		#container{width:1224px;height:500px ;overflow: hidden;position: relative;margin:0 auto;box-shadow: 3px 3px 12px rgba(0,0,0,.3);}
+		#list{width:8568px;height:500px;position: absolute;z-index:1;
+			/*transition:left 0.4s ease;
+			-moz-transition:left 0.4s ease;
+			-webkit-transition:left 0.4s ease;
+			-o-transition:left 0.4s ease;*/ }
+		#list img{float: left;}
+		#buttons{position:absolute;height:10px;width:100px;z-index: 2;bottom:20px;left:50%;margin-left: -50px;}
+		#buttons span{cursor:pointer;float:left;width:10px;height:10px;border-radius: 50%;background:rgba(0,0,0,.7);margin-right:5px;}
+		#buttons .on{background: rgba(255,255,255,.7);}
+		.arrow{
+			cursor: pointer;
+			display:none;
+			line-height:39px;
+			text-align: center;
+			font-size: 36px;
+			font-weight: bold;
+			width:40px;
+			height: 40px;
+			position:absolute;
+			z-index:2;
+			top:50%;
+			margin-top:-20px;
+			background-color:rgba(0,0,0,.3);
+			color:#fff;
+		}
+		.arrow:hover{background-color:rgba(0,0,0,.7);}
+		#container:hover .arrow{display: block;}
+		#prev{left:0;}
+		#next{right:0;}
+	</style>
+	<script type="text/javascript">
+	window.onload=function(){
+		var container=document.getElementById('container');
+		var list=document.getElementById('list');
+		var buttons=document.getElementById('buttons').getElementsByTagName('span');
+		var prev=document.getElementById('prev');
+		var next=document.getElementById('next');
+		var index=1;
+		var timer;
+		// var animated=false;
+		var picwidth=1224;//picture width;
+		// 绑定箭头点击事件
+		function arrow(num){
+			var newleft=parseInt(list.style.left)+num;
+			list.style.left=newleft+'px';
+			if(newleft<=-picwidth*5){
+				list.style.left=0+'px';
+			}
+			if(newleft>=picwidth){
+				list.style.left=-picwidth*4+'px';
+			}
+		}
+		next.onclick=function(){
+			index++;
+			if(index>5){
+				index=1;
+			}
+			showCircle(index);
+			arrow(-picwidth);
+		}
+		prev.onclick=function(){
+			index--;
+			if(index<1){
+				index=5;
+			}
+			showCircle(index);
+			arrow(picwidth);
+		}
+		// 小圆圈滚动
+		function showCircle(index){
+			for (var i = 0; i < buttons.length; i++) {
+				buttons[i].className='';
+			}
+			buttons[index-1].className='on';
+		}
+		// 小圆圈点击切换
+		function replay(){
+			for (var i = 0; i < buttons.length; i++) {
+				(function(){
+					var ii=i;
+					buttons[ii].onclick=function(){
+						list.style.left=ii*(-picwidth)+'px';
+						
+						var index=buttons[ii].getAttribute('index');
+						console.log(index);
+						showCircle(index);
+					}
+
+				})();
+			}
+		}
+		// 图片自动轮播
+		function autoplay(){
+			timer=setInterval(function(){
+				next.onclick();
+			},3000);
+		}
+		// 清除定时器
+		function stopplay(){
+			clearInterval(timer);
+		}
+		// container容器添加鼠标移入，自动轮播停止
+		container.onmouseover=stopplay;
+		container.onmouseout=autoplay;
+		replay();
+		autoplay();
+	}
+	</script>
+</head>
+<body>
+<!-- 问题有二
+首先是循环遍历绑定onclick事件，容易导致只能绑定最后一个事件
+其次是给图片添加切换效果是，由于过快点击（点击速度超过图片切换速度），导致图片的小圆点导航错乱
+还有setTimeout()和setInterval()定时器的区别
+淡入淡出效果，图片切换的间隙问题。
+ -->
+	<div id="container" >
+		<div id="list" style="left:0px;">
+			<!-- <img src="img/5.jpg" alt="1" /> -->
+			<img src="img/1.jpg" alt="1">
+			<img src="img/2.jpg" alt="2">
+			<img src="img/3.jpg" alt="3">
+			<img src="img/4.jpg" alt="4">
+			<img src="img/5.jpg" alt="5">
+			<!-- <img src="img/1.jpg" alt="5"> -->
+		</div>
+		<div id="buttons">
+			<span index="1" class="on"></span>
+			<span index="2"></span>
+			<span index="3"></span>
+			<span index="4"></span>
+			<span index="5"></span>
+		</div>
+		<a href="javascript:;" id="prev" class="arrow">&lt;</a>
+		<a href="javascript:;" id="next" class="arrow">&gt;</a>
+	</div>
+</body>
+</html>
