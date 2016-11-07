@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Head tag -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google-site-verification" content="xBT4GhYoi5qRD5tr338pgPM5OWHHIDR6mNg1a3euekI" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keyword"  content="">
+    <link rel="shortcut icon" href="/img/favicon.ico">
+
+    <title>
+        
+          Markdown - 時小兒名叫李大帥
+        
+    </title>
+
+    <link rel="canonical" href="http://spellsnow.github.io/2016/11/07/Markdown/">
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="/css/hux-blog.min.css">
+
+    <!-- Pygments Github CSS -->
+    <link rel="stylesheet" href="/css/syntax.css">
+
+    <!-- Custom Fonts -->
+    <!-- <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"> -->
+    <!-- Hux change font-awesome CDN to qiniu -->
+    <link href="http://cdn.staticfile.org/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <!-- Hux Delete, sad but pending in China
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/
+    css'>
+    -->
+
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- ga & ba script hoook -->
+    <script></script>
+</head>
+
+
+<!-- hack iOS CSS :active style -->
+<body ontouchstart="">
+
+    <!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">lidashuai</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <!-- Known Issue, found by Hux:
+            <nav>'s height woule be hold on by its content.
+            so, when navbar scale out, the <nav> will cover tags.
+            also mask any touch event of tags, unfortunately.
+        -->
+        <div id="huxblog_navbar">
+            <div class="navbar-collapse">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    
+
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/about/">About</a>
+                        </li>
+                        
+                    
+
+                        
+                        <li>
+                            <a href="/tags/">Tags</a>
+                        </li>
+                        
+                    
+                    
+                </ul>
+            </div>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+<script>
+    // Drop Bootstarp low-performance Navbar
+    // Use customize navbar with high-quality material design animation
+    // in high-perf jank-free CSS3 implementation
+    var $body   = document.body;
+    var $toggle = document.querySelector('.navbar-toggle');
+    var $navbar = document.querySelector('#huxblog_navbar');
+    var $collapse = document.querySelector('.navbar-collapse');
+
+    $toggle.addEventListener('click', handleMagic)
+    function handleMagic(e){
+        if ($navbar.className.indexOf('in') > 0) {
+        // CLOSE
+            $navbar.className = " ";
+            // wait until animation end.
+            setTimeout(function(){
+                // prevent frequently toggle
+                if($navbar.className.indexOf('in') < 0) {
+                    $collapse.style.height = "0px"
+                }
+            },400)
+        }else{
+        // OPEN
+            $collapse.style.height = "auto"
+            $navbar.className += " in";
+        }
+    }
+</script>
+
+
+    <!-- Main Content -->
+    
+<!-- Image to hack wechat -->
+<!-- <img src="http://spellsnow.github.io/img/icon_wechat.png" width="0" height="0"> -->
+<!-- <img src="{{ site.baseurl }}/{% if page.header-img %}{{ page.header-img }}{% else %}{{ site.header-img }}{% endif %}" width="0" height="0"> -->
+
+<!-- Post Header -->
+<style type="text/css">
+    header.intro-header{
+        background-image: url('/img/home-bg.jpg')
+    }
+</style>
+<header class="intro-header" >
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <div class="post-heading">
+                    <div class="tags">
+                        
+                          <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
+                        
+                    </div>
+                    <h1>Markdown</h1>
+                    <h2 class="subheading">undefined</h2>
+                    <span class="meta">
+                        Posted by lidashuai on
+                        2016-11-07
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Post Content -->
+<article>
+    <div class="container">
+        <div class="row">
+
+    <!-- Post Container -->
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                post-container">
+
+                <h1 id="Markdown"><a href="#Markdown" class="headerlink" title="Markdown"></a>Markdown</h1><h2 id="Overview-概览"><a href="#Overview-概览" class="headerlink" title="Overview 概览"></a>Overview 概览</h2><p><em>Outline</em></p>
+<p>[TOC]</p>
+<h2 id="Headers-标题"><a href="#Headers-标题" class="headerlink" title="Headers 标题"></a>Headers 标题</h2><p>使用1-6个 <code>#</code> 字符，分别代表了h1-h6六个标题等级</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section"># This is an h1</span></span><br><span class="line"><span class="section">## This is an h2</span></span><br><span class="line"><span class="section">###### This is an h6</span></span><br></pre></td></tr></table></figure>
+<h2 id="Blockquotes-块引用"><a href="#Blockquotes-块引用" class="headerlink" title="Blockquotes 块引用"></a>Blockquotes 块引用</h2><p>Markdown使用 <code>&gt;</code> 符号代表块引用，格式及效果如下：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="quote">&gt; This is a blockquote with two paragraphs. This is first paragraph.</span></span><br><span class="line"><span class="quote">&gt;</span><br><span class="line">&gt; This is second pragraph.</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="quote">&gt; This is another blockquote with one paragraph.There is three empty line to seperate two blockquote.</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>This is a blockquote with two paragraphs. This is first paragraph.</p>
+<p>This is second pragraph.</p>
+<p>This is another blockquote with one paragraph.There is three empty line to seperate two blockquote.</p>
+</blockquote>
+<h2 id="Lists-列表"><a href="#Lists-列表" class="headerlink" title="Lists 列表"></a>Lists 列表</h2><p>输入<code>* list item 1</code>可以创建一个无序列表，除了 <code>*</code> 号，你也可以使用 <code>+</code> 或者 <code>-</code></p>
+<p>输入 <code>1. list item 1</code> 将会创建一个有序列表</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="section">### un-ordered list</span></span><br><span class="line"><span class="bullet">* </span>Red</span><br><span class="line"><span class="bullet">* </span>Green</span><br><span class="line"><span class="bullet">* </span>Blue</span><br><span class="line"></span><br><span class="line"><span class="section">### ordered list</span></span><br><span class="line"><span class="bullet">1. </span>Red</span><br><span class="line"><span class="bullet">2. </span>Green</span><br><span class="line"><span class="bullet">3. </span>Blue</span><br></pre></td></tr></table></figure>
+<h3 id="un-ordered-list-无序列表"><a href="#un-ordered-list-无序列表" class="headerlink" title="un-ordered list 无序列表"></a>un-ordered list 无序列表</h3><ul>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ul>
+<h3 id="ordered-list-有序列表"><a href="#ordered-list-有序列表" class="headerlink" title="ordered list 有序列表"></a>ordered list 有序列表</h3><ol>
+<li>Red</li>
+<li>Green</li>
+<li>Blue</li>
+</ol>
+<h2 id="Task-List-任务列表"><a href="#Task-List-任务列表" class="headerlink" title="Task List 任务列表"></a>Task List 任务列表</h2><p>任务列表使用 <code>-[ ]</code> 或者<code>-[x]</code> （x代表默认选中，完成）标记</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">-[ ] incomplete</span><br><span class="line">-[x] comleted</span><br></pre></td></tr></table></figure>
+<p>-[ ] incomplete</p>
+<p>-[x] completed</p>
+<h2 id="Code-Blocks-代码块"><a href="#Code-Blocks-代码块" class="headerlink" title="Code Blocks 代码块"></a>Code Blocks 代码块</h2><p>将代码包围在`  <figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">```gfm</span><br><span class="line">Here&apos;s an example</span><br><span class="line"></span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<p>funciton test(){<br>    console.log(“notice the blank line before this function?”);<br>}<br>​<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">syntax highlighting</span><br><span class="line">​```ruby</span><br><span class="line">require &apos;redcarpet&apos;</span><br><span class="line">markdown = Redcarpet.new(&quot;Hello World!&quot;)</span><br><span class="line">puts markdown.to_html</span><br><span class="line">​</span><br></pre></td></tr></table></figure></p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">Here&apos;s an example</span><br></pre></td></tr></table></figure>
+<p>funciton test(){<br>    console.log(“notice the blank line before this function?”);<br>}<br><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">syntax highlighting</span><br><span class="line">```ruby</span><br><span class="line">require &apos;redcarpet&apos;</span><br><span class="line">markdown = Redcarpet.new(&quot;Hello World!&quot;)</span><br><span class="line">puts markdown.to_html</span><br></pre></td></tr></table></figure></p>
+<h2 id="Math-Blocks-数学式"><a href="#Math-Blocks-数学式" class="headerlink" title="Math Blocks 数学式"></a>Math Blocks 数学式</h2><p>你能够使用 MathJax 渲染 LaTeX 数学表达式</p>
+<p>输入<code>$$</code>，然后输入区域就可以接受 Tex/LaTex</p>
+<p>$$<br>\mathbf{V}_1 \times \mathbf{V}_2 = \begin{vmatrix}<br>\mathbf{i} &amp; \mathbf{j} &amp; \mathbf{k} \<br>\frac{\partial X}{\partial u} &amp; \frac{\partial Y}{\partial u} &amp; 0\<br>\frac{\partial X}{\partial v} &amp; \frac{\partial Y}{\partial v} &amp; 0\<br>\end{vmatrix}<br>$$<br>markdown源文件如下</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\mathbf&#123;V&#125;<span class="emphasis">_1 \times \mathbf&#123;V&#125;_</span>2 =  \begin&#123;vmatrix&#125; </span><br><span class="line">\mathbf&#123;i&#125; &amp; \mathbf&#123;j&#125; &amp; \mathbf&#123;k&#125; \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial u&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial u&#125; &amp; 0 \\</span><br><span class="line">\frac&#123;\partial X&#125;&#123;\partial v&#125; &amp;  \frac&#123;\partial Y&#125;&#123;\partial v&#125; &amp; 0 \\</span><br><span class="line">\end&#123;vmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+<h2 id="Tables-列表"><a href="#Tables-列表" class="headerlink" title="Tables 列表"></a>Tables 列表</h2><p>输入<code>|First Header|Second Header|</code>可以创建一个两列的列表</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">|First Header|Second Header|</span><br><span class="line">|------------|-------------|</span><br><span class="line">|Content Cell|COntent Cell |</span><br><span class="line">|Content Cell|Content Cell |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">First Header</th>
+<th>Second Header</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td>Content Cell</td>
+</tr>
+<tr>
+<td style="text-align:left">Content Cell</td>
+<td>Content Cell</td>
+</tr>
+</tbody>
+</table>
+<p>你也可以使用列对齐，你可以通过<code>:</code>来实现左对齐、右对齐和居中对齐</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">| Left-Aligned  | Center Aligned  | Right Aligned |</span><br><span class="line">| :------------ |:---------------:| -----:|</span><br><span class="line">| col 3 is      | some wordy text | $1600 |</span><br><span class="line">| col 2 is      | centered        |   $12 |</span><br><span class="line">| zebra stripes | are neat        |    $1 |</span><br></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Left-Aligned</th>
+<th style="text-align:center">Center Aligned</th>
+<th style="text-align:right">Right Aligned</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">col 3 is</td>
+<td style="text-align:center">some wordy text</td>
+<td style="text-align:right">$1600</td>
+</tr>
+<tr>
+<td style="text-align:left">col 2 is</td>
+<td style="text-align:center">centered</td>
+<td style="text-align:right">$12</td>
+</tr>
+<tr>
+<td style="text-align:left">zebra stripes</td>
+<td style="text-align:center">are neat</td>
+<td style="text-align:right">$1</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Footnotes-脚注"><a href="#Footnotes-脚注" class="headerlink" title="Footnotes 脚注"></a>Footnotes 脚注</h2><p>你可以使用<code>[^footnote]</code>创建脚注，当鼠标经过时，可以看到脚注内容</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">You can create footnote like this[^footnote].</span><br><span class="line">[<span class="symbol">^footnote</span><span class="link">]: Here is the *text* of the **footnote**.</span></span><br></pre></td></tr></table></figure>
+<p>You can create footnote like this[^footnote].</p>
+<p>[^footnote]: Here is the <em>text</em> of the <strong>footnote</strong>.</p>
+<h2 id="Horizontal-Rules-分割线"><a href="#Horizontal-Rules-分割线" class="headerlink" title="Horizontal Rules 分割线"></a>Horizontal Rules 分割线</h2><p>可以在空白行里使用 <code>***</code>  或者 <code>---</code> 创建一个水平分割线</p>
+<hr>
+<h2 id="Table-of-Contents-目录"><a href="#Table-of-Contents-目录" class="headerlink" title="Table of Contents 目录"></a>Table of Contents 目录</h2><p>输入<code>[toc]</code>就可以创建一个目录，它会自动提取文章里的标题，实时更新。</p>
+<h2 id="Span-元素"><a href="#Span-元素" class="headerlink" title="Span 元素"></a>Span 元素</h2><h3 id="Links-链接"><a href="#Links-链接" class="headerlink" title="Links 链接"></a>Links 链接</h3><p>Markdown 支持两种形式的链接，行内链接和参考链接</p>
+<p>它们形式相同，都是通过<code>[square brackets方括号]</code>创建。</p>
+<p>行内链接是通过在方括号之后紧跟一个圆括号，圆括号内放入你想链接到的URL地址。</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is [<span class="string">an example</span>](<span class="link">http://example.com/</span>) inline link.</span><br></pre></td></tr></table></figure>
+<p>This is <a href="http://example.com/" target="_blank" rel="external">an example</a> inline link.</p>
+<h3 id="Internal-Links-锚点链接"><a href="#Internal-Links-锚点链接" class="headerlink" title="Internal Links 锚点链接"></a>Internal Links 锚点链接</h3><p>你也可以设置锚点链接，通过锚点链接跳转到指定的标签上去，锚点可以在圆括号内设置，<code>#</code> 加上所要链接到的标题，下面的这个链接就是<code>(#Headers 标题)</code>.</p>
+<p>按住Command（on Windows: Ctrl）+ Click 点击链接，假如跳转到<a href="#Headers 标题">Headers 标题</a>.</p>
+<h3 id="Reference-Links-参考链接"><a href="#Reference-Links-参考链接" class="headerlink" title="Reference Links 参考链接"></a>Reference Links 参考链接</h3><p>参考链接的形式类似于普通的链接，只不过方括号后面还是设置一个方括号而不是圆括号，后面的方括号里设置参考链接的id，像下面这样：</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is [<span class="string">an example</span>][<span class="symbol">id</span>] reference-style link.</span><br><span class="line">Then,anywhere in the document, you define your link label like this, on a line by itself:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">id</span><span class="link">]: http://example.com/ "Optional Title Here"</span></span><br></pre></td></tr></table></figure>
+<p>This is <a href="http://example.com/" title="Optional Title Here" target="_blank" rel="external">an example</a> reference-style link.<br>Then,anywhere in the document, you define your link label like this, on a line by itself:</p>
+<p>你也可以设置隐式链接，直接省略id，在参考列表里直接填写链接名称</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">This is [<span class="string">an example</span>][<span class="symbol"></span>] reference-style link.</span><br><span class="line">Then,anywhere in the document, you define your link label like this, on a line by itself:</span><br><span class="line"></span><br><span class="line">[<span class="symbol">an example</span><span class="link">]: http://example.com/ "Optional Title Here"</span></span><br></pre></td></tr></table></figure>
+<p>This is <a href="http://example.com/" title="Optional Title Here" target="_blank" rel="external">an example</a> reference-style link.<br>Then,anywhere in the document, you define your link label like this, on a line by itself:</p>
+<h2 id="Images-图片"><a href="#Images-图片" class="headerlink" title="Images 图片"></a>Images 图片</h2><p>图片类似于链接，但是需要在链接前面增加一个感叹号<code>!</code></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg</span>)</span><br><span class="line">![<span class="string">Alt text</span>](<span class="link">/path/to/img.jpg "Optional title"</span>)</span><br></pre></td></tr></table></figure>
+<p><img src="/path/to/img.jpg" alt="Alt text"><br><img src="/path/to/img.jpg" alt="Alt text" title="Optional title"></p>
+<p> <img src="exa_img.jpg" alt="exa_img"></p>
+<h2 id="Emphasis-强调"><a href="#Emphasis-强调" class="headerlink" title="Emphasis  强调"></a>Emphasis  强调</h2><p>Markdown标记使用<code>*</code> 和<code>_</code>强调文本，类似于HTML中的<code>&lt;em&gt;</code>标签</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="emphasis">*single asterisks*</span></span><br><span class="line"><span class="emphasis">_single underscores_</span></span><br></pre></td></tr></table></figure>
+<p><em>single asterisks</em><br><em>single underscores</em></p>
+<p>在单词中，特别是代码名称中则会忽略<code>_</code></p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">wow<span class="emphasis">_great_</span>stuff</span><br><span class="line">do<span class="emphasis">_this_</span>and<span class="emphasis">_do_</span>that<span class="emphasis">_and_</span>another_thing.</span><br></pre></td></tr></table></figure>
+<p>wow_great_stuff<br>do_this_and_do_that_and_another_thing.</p>
+<p>当需要使用<code>*</code> <code>_</code>时，可以使用<code>\</code>进行转义</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\*this text is surrounded by literal asterisks\*</span><br></pre></td></tr></table></figure>
+<p>*this text is surrounded by literal asterisks*</p>
+<h2 id="Strong-加粗"><a href="#Strong-加粗" class="headerlink" title="Strong 加粗"></a>Strong 加粗</h2><p>使用<code>**</code> 和<code>__</code>进行加粗，类似于HTML中的<code>&lt;strong&gt;</code>标签</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line"><span class="strong">**double asterisks**</span></span><br><span class="line"><span class="strong">__double underscores__</span></span><br></pre></td></tr></table></figure>
+<p><strong>double asterisks</strong><br><strong>double underscores</strong></p>
+<h2 id="Code-代码"><a href="#Code-代码" class="headerlink" title="Code 代码"></a>Code 代码</h2><p>使用(`)显示代码</p>
+<figure class="highlight markdown"><table><tr><td class="code"><pre><span class="line">Use the <span class="code">`printf()`</span> function</span><br></pre></td></tr></table></figure>
+<p>Use the <code>printf()</code> function</p>
+<h2 id="Strikethrough-删除线（中划线）"><a href="#Strikethrough-删除线（中划线）" class="headerlink" title="Strikethrough 删除线（中划线）"></a>Strikethrough 删除线（中划线）</h2><p>使用<code>~~</code>可以创建删除线</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">~~Mistaken text.~~</span><br></pre></td></tr></table></figure>
+<p><del>Mistaken text.</del></p>
+<h2 id="Underline-下划线"><a href="#Underline-下划线" class="headerlink" title="Underline 下划线"></a>Underline 下划线</h2><p>markdown没有提供下划线命令，可以使用原生的HTML标签</p>
+<p><code>&lt;u&gt;Underline&lt;/u&gt;</code>   <u>Underline</u></p>
+<h2 id="HTML"><a href="#HTML" class="headerlink" title="HTML"></a>HTML</h2><p>使用HTML原生的标签</p>
+<ul>
+<li>Underline: <code>&lt;u&gt;underline&lt;/u&gt;</code></li>
+<li>Image: <code>&lt;img src=&quot;http://www.w3.org/html/logo/img/mark-word-icon.png&quot; width=&quot;200px&quot; /&gt;</code> (And <code>width</code>, <code>height</code> attribute in HTML tag, and <code>width</code>, <code>height</code>, <code>zoom</code> style in <code>style</code> attribute will be applied.)</li>
+<li>Comments: <code>&lt;!-- This is some comments --&gt;</code></li>
+<li>Hyperlink: <code>&lt;a href=&quot;http://typora.io&quot; target=&quot;_blank&quot;&gt;link&lt;/a&gt;</code>.</li>
+</ul>
+
+
+                <hr>
+
+                
+                <!-- 多说 Share start -->
+                </style>
+                <div class="ds-share"
+                    style="text-align: right"
+                    data-thread-key="2016/11/07/Markdown/"
+                    data-title="Markdown"
+                    data-url="http://spellsnow.github.io/2016/11/07/Markdown/"
+                    data-images=""
+                    data-content="MarkdownOverview 概览Outline
+[TOC]
+Headers 标题使用1-... | 時小兒名叫李大帥 " >
+                    <div class="ds-share-inline">
+                      <ul  class="ds-share-icons-16">
+                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
+                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
+                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
+                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
+                      </ul>
+                      <div class="ds-share-icons-more">
+                      </div>
+                    </div>
+                <hr>
+                </div>
+                <!-- 多说 Share end-->
+                
+
+                <ul class="pager">
+                    
+                    
+                        <li class="next">
+                            <a href="/2016/07/30/clearFloat/" data-toggle="tooltip" data-placement="top" title="清除浮动">Next Post &rarr;</a>
+                        </li>
+                    
+                </ul>
+
+                
+                <!-- 多说评论框 start -->
+                <div class="comment">
+                    <div class="ds-thread"
+                        data-thread-key="2016/11/07/Markdown/"
+                        data-title="Markdown"
+                        data-url="http://spellsnow.github.io/2016/11/07/Markdown/" >
+                    </div>
+                </div>
+                <!-- 多说评论框 end -->
+                
+
+                
+
+            </div>
+    <!-- Side Catalog Container -->
+        
+
+    <!-- Sidebar Container -->
+
+            <div class="
+                col-lg-8 col-lg-offset-2
+                col-md-10 col-md-offset-1
+                sidebar-container">
+
+                <!-- Featured Tags -->
+                
+                <section>
+                    <!-- no hr -->
+                    <h5><a href="/tags/">FEATURED TAGS</a></h5>
+                    <div class="tags">
+                       
+                          <a class="tag" href="/tags/#markdown" title="markdown">markdown</a>
+                        
+                    </div>
+                </section>
+                
+
+                <!-- Friends Blog -->
+                
+                <hr>
+                <h5>FRIENDS</h5>
+                <ul class="list-inline">
+
+                    
+                        <li><a href="http://blog.kaijun.rocks">Kaijun&#39;s Blog</a></li>
+                    
+                        <li><a href="http://huangxuan.me">Hux Blog</a></li>
+                    
+                        <li><a href="http://wsgzao.github.io">HelloDog</a></li>
+                    
+                </ul>
+                
+            </div>
+
+        </div>
+    </div>
+</article>
+
+
+<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    // dynamic User by Hux
+    var _user = 'spellsnow';
+
+    // duoshuo comment query.
+    var duoshuoQuery = {short_name: _user };
+    (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0]
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+    })();
+</script>
+<!-- 多说公共JS代码 end -->
+
+
+
+
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+<!-- anchor-js, Doc:http://bryanbraun.github.io/anchorjs/ -->
+<script>
+    async("http://cdn.bootcss.com/anchor-js/1.1.1/anchor.min.js",function(){
+        anchors.options = {
+          visible: 'always',
+          placement: 'right',
+          icon: '#'
+        };
+        anchors.add().remove('.intro-header h1').remove('.subheading').remove('.sidebar-container h5');
+    })
+</script>
+<style>
+    /* place left on bigger screen */
+    @media all and (min-width: 800px) {
+        .anchorjs-link{
+            position: absolute;
+            left: -0.75em;
+            font-size: 1.1em;
+            margin-top : -0.1em;
+        }
+    }
+</style>
+
+
+
+    <!-- Footer -->
+    <!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                <ul class="list-inline text-center">
+                
+                
+                
+                    <li>
+                        <a target="_blank" href="https://www.zhihu.com/people/xie-fan-wei-du">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa  fa-stack-1x fa-inverse">知</i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+                    <li>
+                        <a target="_blank" href="http://weibo.com/3312843743">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-weibo fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                
+                    <li>
+                        <a target="_blank"  href="https://github.com/spellsnow">
+                            <span class="fa-stack fa-lg">
+                                <i class="fa fa-circle fa-stack-2x"></i>
+                                <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                            </span>
+                        </a>
+                    </li>
+                
+
+                
+
+                </ul>
+                <p class="copyright text-muted">
+                    Copyright &copy; lidashuai 2016 
+                    <br>
+                    Design by <a href="https://github.com/spellsnow">spellsnow</a> | 
+                    <iframe
+                        style="margin-left: 2px; margin-bottom:-5px;"
+                        frameborder="0" scrolling="0" width="91px" height="20px"
+                        src="https://ghbtns.com/github-btn.html?user=spellsnow&repo=spellsnow.github.io&type=star&count=true" >
+                    </iframe>
+                    <br>
+                    Theme by <a href="http://huangxuan.me">Hux</a> 
+                    <br>
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- jQuery -->
+<script src="/js/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="/js/bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="/js/hux-blog.min.js"></script>
+
+
+<!-- async load function -->
+<script>
+    function async(u, c) {
+      var d = document, t = 'script',
+          o = d.createElement(t),
+          s = d.getElementsByTagName(t)[0];
+      o.src = u;
+      if (c) { o.addEventListener('load', function (e) { c(null, e); }, false); }
+      s.parentNode.insertBefore(o, s);
+    }
+</script>
+
+<!-- 
+     Because of the native support for backtick-style fenced code blocks 
+     right within the Markdown is landed in Github Pages, 
+     From V1.6, There is no need for Highlight.js, 
+     so Huxblog drops it officially.
+
+     - https://github.com/blog/2100-github-pages-now-faster-and-simpler-with-jekyll-3-0  
+     - https://help.github.com/articles/creating-and-highlighting-code-blocks/    
+-->
+<!--
+    <script>
+        async("http://cdn.bootcss.com/highlight.js/8.6/highlight.min.js", function(){
+            hljs.initHighlightingOnLoad();
+        })
+    </script>
+    <link href="http://cdn.bootcss.com/highlight.js/8.6/styles/github.min.css" rel="stylesheet">
+-->
+
+
+<!-- jquery.tagcloud.js -->
+<script>
+    // only load tagcloud.js in tag.html
+    if($('#tag_cloud').length !== 0){
+        async("http://spellsnow.github.io/js/jquery.tagcloud.js",function(){
+            $.fn.tagcloud.defaults = {
+                //size: {start: 1, end: 1, unit: 'em'},
+                color: {start: '#bbbbee', end: '#0085a1'},
+            };
+            $('#tag_cloud a').tagcloud();
+        })
+    }
+</script>
+
+<!--fastClick.js -->
+<script>
+    async("http://cdn.bootcss.com/fastclick/1.0.6/fastclick.min.js", function(){
+        var $nav = document.querySelector("nav");
+        if($nav) FastClick.attach($nav);
+    })
+</script>
+
+
+<!-- Google Analytics -->
+
+
+
+
+<!-- Baidu Tongji -->
+
+<script>
+    // dynamic User by Hux
+    var _baId = '628448d56639c72a6f8199ddd5c742c5';
+
+    // Originial
+    var _hmt = _hmt || [];
+    (function() {
+      var hm = document.createElement("script");
+      hm.src = "//hm.baidu.com/hm.js?" + _baId;
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+
+
+<!-- Side Catalog -->
+
+
+
+
+
+<!-- Image to hack wechat -->
+<img src="http://spellsnow.github.io/img/icon_wechat.png" width="0" height="0" />
+<!-- Migrate from head to bottom, no longer block render and still work -->
+
+</body>
+
+</html>
