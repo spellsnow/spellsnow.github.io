@@ -188,7 +188,7 @@
 
                 <h2 id="初识outline"><a href="#初识outline" class="headerlink" title="初识outline"></a>初识outline</h2><p>当第一次遇见outline时，压根就没有多注意这个标签，感觉没什么卵用，都有border这个强大的边框助手，还有你什么事呢！直到——在最近刚出的一本css书籍《css secrets》中，看到了outline的独特之处，他不占据空间啊。</p>
 <hr>
-<h3 id="来看一看outline的知识点-张鑫旭"><a href="#来看一看outline的知识点-张鑫旭" class="headerlink" title="来看一看outline的知识点   张鑫旭"></a>来看一看outline的知识点   <a href="http://www.zhangxinxu.com/wordpress/2015/04/css3-radius-outline/" target="_blank" rel="external">张鑫旭</a></h3><ol>
+<h3 id="来看一看outline的知识点-张鑫旭"><a href="#来看一看outline的知识点-张鑫旭" class="headerlink" title="来看一看outline的知识点   张鑫旭"></a>来看一看outline的知识点   <a href="https://www.zhangxinxu.com/wordpress/2015/04/css3-radius-outline/" target="_blank" rel="external">张鑫旭</a></h3><ol>
 <li><p>border近亲<br>outline和border是近亲，为什么这么讲呢？首先，都是给元素外面套框框的；其次，支持的属性值几乎都是一样的，例如，outline-style和border-style值dotted, dashed, solid, …之类的，一些语法也几乎一样。如果这都不算近亲，你让绝对定位和浮动何言以对。</p>
 </li>
 <li><p>IE8+支持<br>outline严格来讲属于CSS3属性，但是IE8+浏览器就支持了。外挂一句，IE9+浏览器的outline还支持invert，专门针对outline-color. 所以，如果你的项目不用管IE6/IE7浏览器，可以把outline挂在心中，有时候说不定会帮忙。</p>
@@ -199,7 +199,7 @@
 </ol>
 <h2 id="box-shadow"><a href="#box-shadow" class="headerlink" title="box-shadow"></a>box-shadow</h2><p>之所以引出outline是因为，我在做一个滑动门标签页导航时，给每个标签添加了一个border边框，由于边框占据实际的像素，会导致每次hover上去的时候会有整体的宽度的改变，影响实际的体验和美观，这种情况在一些小的网站上经常会有出现。</p>
 <blockquote>
-<p><a href="http://codepen.io/spellsnow/pen/AXdYqj" target="_blank" rel="external">在线查看border效果</a></p>
+<p><a href="https://codepen.io/spellsnow/pen/AXdYqj" target="_blank" rel="external">在线查看border效果</a></p>
 </blockquote>
 <p>我第一时间想到的解决办法是使用outline，因为它完全不需要占用空间，但是问题出在outline没有广泛支持的圆角属性，这就不得不求助于其他渠道，那就是box-shadow，它的功能可以类似于outline，也是不需要占用额外的空间，但是更好的地方在于box-shadow不仅可以随意设置各个圆角大小，而且可以设置为内阴影和外阴影，这个就很强大了,box-shadow的设置很简洁<br><code>box-shadow:inset 0 0 0 1px red;</code><br>inset意思就是内阴影，其他属性依次为水平偏移、垂直偏移、模糊半径、扩展大小、阴影颜色。这就完全避免了宽度跳动的问题。</p>
 <blockquote>
