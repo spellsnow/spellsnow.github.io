@@ -1,0 +1,29 @@
+.login{
+	width:450px;
+	// height:600px;
+	border:1px solid #ccc;
+	border-radius: 10px;
+	box-shadow: 0 9px 30px -6px rgba(0,0,0,.2);
+	font-family: "Microsoft Yahei","微软雅黑";
+	margin:100px auto;
+}
+.logo img{
+	margin:50px 200px 0;
+}
+.logo h4{
+	text-align: center;
+}
+
+.content{
+	padding:20px 50px;
+}
+.content button{
+	 width:100%;
+	 margin:10px 0;
+}
+.other{
+	margin:20px 0 0;
+}
+.other span{
+	margin-right: 10px;
+}

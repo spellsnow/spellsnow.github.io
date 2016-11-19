@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商品结算</title>
+	<link rel="stylesheet" href="style/reset.css">
+	<link rel="stylesheet" href="style/main.css">
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/cart.css">
+</head>
+<body>
+	<div class="headerBar">
+		<div class="logoBar">
+			<div class="comWidth">
+				<div class="logo fl">
+					<a href="index.html"><img src="images/logo.png" alt="慕课网"></a>
+				</div>
+				<div class="search_box fl">
+					<input type="text" class="search_text fl">
+					<input type="button" value="搜 索" class="search_btn fr">
+				</div>
+				<div class="shopCar fr">
+					<span class="shopText fl"><i class="fa fa-shopping-cart" aria-hidden="true"></i>购物车</span>
+					<span class="shopNum fl">4<i class="fa fa-caret-square-o-down" aria-hidden="true"></i></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+	<div class="container clearfix">
+		<table id="cartTable">
+	    <thead>
+	        <tr>
+	            <th><label><input class="check-all check" type="checkbox"/>&nbsp;全选</label></th>
+	            <th>商品</th>
+	            <th>单价</th>
+	            <th>数量</th>
+	            <th>小计</th>
+	            <th>操作</th>
+	        </tr>
+	    </thead>
+	    <tbody>
+	        <tr>
+	            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+	            <td class="goods"><img src="images/l1.jpg" alt=""/><span>FIIL Diva智能蓝牙无线降噪耳机</span></td>
+	            <td class="price">999</td>
+	            <td class="count" onselectstart="return false;">
+	                <span class="reduce"></span>
+	                <input class="count-input" type="text" value="1"/>
+	                <span class="add">+</span></td>
+	            <td class="subtotal">999</td>
+	            <td class="operation"><span class="delete">删除</span></td>
+	        </tr>
+	        <tr>
+	            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+	            <td class="goods"><img src="images/l2.jpg" alt=""/><span>《深泽直人》</span></td>
+	            <td class="price">199</td>
+	            <td class="count" onselectstart="return false;"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+	            <td class="subtotal">199</td>
+	            <td class="operation"><span class="delete">删除</span></td>
+	        </tr>
+	        <tr>
+	            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+	            <td class="goods"><img src="images/l3.jpg" alt=""/><span>皇帝的新装</span></td>
+	            <td class="price">249</td>
+	            <td class="count" onselectstart="return false;"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+	            <td class="subtotal">249</td>
+	            <td class="operation"><span class="delete">删除</span></td>
+	        </tr>
+	        <tr>
+	            <td class="checkbox"><input class="check-one check" type="checkbox"/></td>
+	            <td class="goods"><img src="images/l4.jpg" alt=""/><span>JBL 蓝牙便携音响</span></td>
+	            <td class="price">999</td>
+	            <td class="count" onselectstart="return false;"><span class="reduce"></span><input class="count-input" type="text" value="1"/><span class="add">+</span></td>
+	            <td class="subtotal">999</td>
+	            <td class="operation"><span class="delete">删除</span></td>
+	        </tr>
+	    </tbody>
+	</table>
+
+	<div class="foot" id="foot">
+	    <label class="fl select-all"><input type="checkbox" class="check-all check"/>&nbsp;全选</label>
+	    <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+	    <div class="fr closing">结 算</div>
+	    <div class="fr total">合计：￥<span id="priceTotal">0.00</span></div>
+	    <div class="fr selected" id="selected">已选商品
+	        <span id="selectedTotal">0</span>件
+	       <!--  <span class="arrow up">︽</span>
+	        <span class="arrow down">︾</span> -->
+	    </div>
+	    <div class="selected-view">
+	        <div id="selectedViewList" class="clearfix">
+	            <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+	        </div>
+	        <span class="arrow">◆<span>◆</span></span>
+	    </div>
+	</div>
+	</div>
+
+	<!-- footer -->
+	<div class="footer">
+		<h4>Copyright © 山东建筑大学 2016-2017 Desigin by <a href="https://spellsnow.github.io">lidashuai</a></h4>
+		<p>慕课商城&nbsp;&nbsp;版权所有&nbsp;&nbsp;侵权必究</p>
+	</div>
+	<script src="js/imgRoller.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/shopNumber.js"></script>
+	<script src="js/cart.js"></script>
+</body>
+</html>

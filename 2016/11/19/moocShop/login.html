@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>登录</title>
+	<link rel="stylesheet" href="style/login.css">
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</head>
+<body>
+	<div class="login">
+		<div class="title">
+			<div class="logo"><a href="index.html"><img src="images/logo.png" alt="MOOC"></a><h4>使用慕课网账号登录</h4></div>
+		</div>
+		<div class="content">
+			<form role="form" ng-app="myApp" ng-controller="validateCtrl" name="myForm" novalidate>
+				 <div class="form-group">
+				    <div class="input-group input-group-lg">
+				      <div class="input-group-addon"><span class="glyphicon glyphicon-user"></span></div>
+				      <input class="form-control" type="text" name="user" placeholder="请输入用户名" ng-model="user" required>
+				    </div>
+				    <span style="color:red;padding-left: 55px;" ng-show="myForm.user.$error.required">必须填写用户名！</span>
+				  </div>
+				 <div class="form-group">
+				    <div class="input-group input-group-lg">
+				      <div class="input-group-addon"><span class="glyphicon glyphicon-lock"></span></div>
+				      <input class="form-control" type="password" name="password" placeholder="请输入密码" ng-model="password" required>
+				    </div>
+				    <span style="color:red;padding-left: 55px;" ng-show="myForm.password.$error.required">必须填写密码!</span>
+				  </div>
+				  <div class="checkbox">
+				    <label>
+				      <input type="checkbox">自动登录
+				    </label>
+				    <span style="float:right;"><a href="register.html">没有账号？注册</a> | <a href="#">忘记密码</a></span>
+				  </div>
+				  <button type="submit" class="btn btn-primary btn-lg">登 录</button>
+				<div class="other">
+					<span>其他账号登录：</span><span><a href="#"><i class="fa fa-weixin" aria-hidden="true"></i></a></span>
+					<span><a href="#"><i class="fa fa-qq" aria-hidden="true"></i></a></span>
+					<span><a href="#"><i class="fa fa-weibo" aria-hidden="true"></i></span>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<script>
+	var app = angular.module('myApp',[]);
+	app.controller('validateCtrl',function($scope){
+		$scope.user = '20130914073';
+		$scope.password = '123456'; 
+	});
+</script>
+
+
+</body>
+</html>
