@@ -190,29 +190,6 @@
                 <hr>
 
                 
-                <!-- 多说 Share start -->
-                </style>
-                <div class="ds-share"
-                    style="text-align: right"
-                    data-thread-key="2016/05/06/my-new-post/"
-                    data-title="我的第一篇博文"
-                    data-url="https://spellsnow.github.io/2016/05/06/my-new-post/"
-                    data-images="https://spellsnow.github.io/2016/05/06/my-new-post/post-bg-2015.jpg"
-                    data-content="外十一首我期待一场磅礴而至的大雨冲刷掉所有的卑微与忧伤我想要挣断黑暗的枷锁听自由的鸟儿自由的歌... | 時小兒名叫李大帥 " >
-                    <div class="ds-share-inline">
-                      <ul  class="ds-share-icons-16">
-                        <li data-toggle="ds-share-icons-more"><a class="ds-more" href="#">分享到：</a></li>
-                        <li><a class="ds-wechat flat" href="javascript:void(0);" data-service="wechat">微信</a></li>
-                        <li><a class="ds-weibo flat" href="javascript:void(0);" data-service="weibo">微博</a></li>
-                        <li><a class="ds-douban flat" href="javascript:void(0);" data-service="douban">豆瓣</a></li>
-                      </ul>
-                      <div class="ds-share-icons-more">
-                      </div>
-                    </div>
-                <hr>
-                </div>
-                <!-- 多说 Share end-->
-                
 
                 <ul class="pager">
                     
@@ -228,17 +205,13 @@
                 </ul>
 
                 
-                <!-- 多说评论框 start -->
-                <div class="comment">
-                    <div class="ds-thread"
-                        data-thread-key="2016/05/06/my-new-post/"
-                        data-title="我的第一篇博文"
-                        data-url="https://spellsnow.github.io/2016/05/06/my-new-post/" >
-                    </div>
-                </div>
-                <!-- 多说评论框 end -->
-                
 
+                
+                <!-- disqus 评论框 start -->
+                <div class="comment">
+                    <div id="disqus_thread" class="disqus-thread"></div>
+                </div>
+                <!-- disqus 评论框 end -->
                 
 
             </div>
@@ -287,25 +260,22 @@
 </article>
 
 
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
-<script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'spellsnow';
 
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
+
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
+<script type="text/javascript">
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "dashuai_li";
+    var disqus_identifier = "https://spellsnow.github.io/2016/05/06/my-new-post/";
+    var disqus_url = "https://spellsnow.github.io/2016/05/06/my-new-post/";
+
     (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
-
-
+<!-- disqus 公共JS代码 end -->
 
 
 
@@ -394,7 +364,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; lidashuai 2016 
+                    Copyright &copy; lidashuai 2017 
                     <br>
                     Design by <a href="https://github.com/spellsnow">spellsnow</a> | 
                     <iframe

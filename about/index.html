@@ -190,34 +190,27 @@
 
 
 
-<!-- 多说评论框 start -->
+
+
 <div class="comment">
-    <div class="ds-thread"
-        data-thread-key="about/index.html"
-        data-title="About"
-        data-url="https://spellsnow.github.io/about/index.html" >
+    <div id="disqus_thread" class="disqus-thread">
+
     </div>
 </div>
-<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+<!-- disqus 公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
-    // dynamic User by Hux
-    var _user = 'spellsnow';
+    /* * * CONFIGURATION VARIABLES * * */
+    var disqus_shortname = "dashuai_li";
+    var disqus_identifier = "https://spellsnow.github.io/about/index.html";
+    var disqus_url = "https://spellsnow.github.io/about/index.html";
 
-    // duoshuo comment query.
-    var duoshuoQuery = {short_name: _user };
     (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0]
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
     })();
 </script>
-<!-- 多说公共JS代码 end -->
-
-
-
+<!-- disqus 公共JS代码 end -->
 
 
 
@@ -243,6 +236,8 @@
                         
                             
                             <a href="/tags/#works" title="works" rel="4">works</a>
+                            
+                        
                             
                         
                             
@@ -406,7 +401,7 @@
 
                 </ul>
                 <p class="copyright text-muted">
-                    Copyright &copy; lidashuai 2016 
+                    Copyright &copy; lidashuai 2017 
                     <br>
                     Design by <a href="https://github.com/spellsnow">spellsnow</a> | 
                     <iframe
